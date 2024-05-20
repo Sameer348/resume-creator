@@ -1,1 +1,6 @@
-# resume-creator
+# resume-creator![WhatsApp Image 2024-05-21 at 12 11 03 AM (1)](https://github.com/Sameer348/resume-creator/assets/113669267/866ea00c-95b2-4511-8565-7784fdb7575d)
+![WhatsApp Image 2024-05-21 at 12 11 04 AM (1)](https://github.com/Sameer348/resume-creator/assets/113669267/961345be-39e8-4912-9893-86ffb3622c53)
+![WhatsApp Image 2024-05-21 at 12 11 04 AM (2)](https://github.com/Sameer348/resume-creator/assets/113669267/7d857295-3cd6-4fd4-b187-4c0551ded976)
+![WhatsApp Image 2024-05-21 at 12 11 05 AM](https://github.com/Sameer348/resume-creator/assets/113669267/03da3467-5819-412c-b3ae-a3ddf78fdd4a)
+![WhatsApp Image 2024-05-21 at 12 11 04 AM](https://github.com/Sameer348/resume-creator/assets/113669267/20d5f362-2135-43e6-bef0-dc1d99e948cf)
+![WhatsApp Image 2024-05-21 at 12 11 03 AM](https://github.com/Sameer348/resume-creator/assets/113669267/e5f895ba-d5db-469c-8b72-1fea3216420f)
