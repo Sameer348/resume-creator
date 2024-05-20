@@ -11,11 +11,11 @@ class declaration_page extends StatefulWidget {
 }
 
 class _declaration_pageState extends State<declaration_page> {
-  Color MyColor = const Color(0xff0475FF);
+  Color MyColor = const Color(0xff14395E);
   var MyTextStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
-    color: const Color(0xff0475FF).withOpacity(0.8),
+    color: const Color(0xff14395E).withOpacity(0.8),
   );
 
   bool switchVal = false;
@@ -43,7 +43,7 @@ class _declaration_pageState extends State<declaration_page> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               width: _width,
               alignment: const Alignment(0, 0.5),
@@ -59,7 +59,7 @@ class _declaration_pageState extends State<declaration_page> {
                 child: Column(
                   children: [
                     Container(
-                      color: Colors.white,
+                   //   color: Colors.white,
                       margin: const EdgeInsets.only(
                           top: 30, bottom: 20, right: 20, left: 20),
                       padding: const EdgeInsets.all(20),
@@ -79,6 +79,7 @@ class _declaration_pageState extends State<declaration_page> {
                                       switchVal = val;
                                     });
                                   },
+                                  activeColor: Color(0xff14395E),
                                 ),
                               ],
                             ),
@@ -90,6 +91,7 @@ class _declaration_pageState extends State<declaration_page> {
                                       Image.asset(
                                         "assets/icons/target.png",
                                         height: _height * 0.06,
+                                        color: Color(0xff14395E),
                                       ),
                                       SizedBox(height: _height * 0.025),
                                       TextFormField(
@@ -191,7 +193,7 @@ class _declaration_pageState extends State<declaration_page> {
                                                       declarationPlaceController,
                                                   decoration:
                                                       const InputDecoration(
-                                                    hintText: "Eg. Surat",
+                                                    hintText: "Eg. Islamabad",
                                                     alignLabelWithHint: true,
                                                     border:
                                                         OutlineInputBorder(),
@@ -235,8 +237,8 @@ class _declaration_pageState extends State<declaration_page> {
                                   print(Global.dateOfBirth);
                                   print(Global.maritalStatus);
                                   print(Global.englishCheckBox);
-                                  print(Global.hindiCheckBox);
-                                  print(Global.gujratiCheckBox);
+                                  print(Global.urduCheckBox);
+                                  print(Global.turkishCheckBox);
                                   print(Global.nationality);
                                   print(Global.course);
                                   print(Global.collage);

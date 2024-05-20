@@ -20,7 +20,7 @@ class PDF_Page extends StatefulWidget {
 class _PDF_PageState extends State<PDF_Page> {
   final pdf = pw.Document();
 
-  Color MyColor = const Color(0xff0475FF);
+  Color MyColor =  Color(0xff14395E);
 
   final image = pw.MemoryImage(
     File(Global.image!.path).readAsBytesSync(),
@@ -32,7 +32,7 @@ class _PDF_PageState extends State<PDF_Page> {
 
   var titleStyle = const TextStyle(color: Colors.white, fontSize: 14);
   var titleStyle2 = TextStyle(
-      color: Colors.blue.shade900, fontSize: 14, fontWeight: FontWeight.w600);
+      color: Color(0xff14395E), fontSize: 14, fontWeight: FontWeight.w600);
   var detailStyle = const TextStyle(color: Colors.grey, fontSize: 12);
   var detailStyle2 = TextStyle(color: Colors.grey.shade700, fontSize: 12);
 
@@ -323,11 +323,11 @@ class _PDF_PageState extends State<PDF_Page> {
           (Global.englishCheckBox == true)
               ? Text(" - English", style: detailStyle)
               : Container(),
-          (Global.hindiCheckBox == true)
-              ? Text(" - Hindi", style: detailStyle)
+          (Global.urduCheckBox == true)
+              ? Text(" - Urdu", style: detailStyle)
               : Container(),
-          (Global.gujratiCheckBox == true)
-              ? Text(" - Gujarati", style: detailStyle)
+          (Global.turkishCheckBox == true)
+              ? Text(" - Turkish", style: detailStyle)
               : Container(),
         ],
       );
@@ -563,10 +563,10 @@ class _PDF_PageState extends State<PDF_Page> {
           (Global.englishCheckBox == true)
               ? pw.Text(" - English", style: detailStylePW)
               : pw.Container(),
-          (Global.hindiCheckBox == true)
+          (Global.urduCheckBox == true)
               ? pw.Text(" - Hindi", style: detailStylePW)
               : pw.Container(),
-          (Global.gujratiCheckBox == true)
+          (Global.turkishCheckBox == true)
               ? pw.Text(" - Gujarati", style: detailStylePW)
               : pw.Container(),
         ],

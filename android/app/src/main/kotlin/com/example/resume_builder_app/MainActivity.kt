@@ -1,4 +1,4 @@
-package com.example.resume_builder_app
+package com.saimdev.wallpaperapp
 
 import io.flutter.embedding.android.FlutterActivity
 

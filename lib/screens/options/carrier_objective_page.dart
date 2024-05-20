@@ -11,7 +11,7 @@ class carrier_objective_page extends StatefulWidget {
 }
 
 class _carrier_objective_pageState extends State<carrier_objective_page> {
-  Color MyColor = const Color(0xff0475FF);
+  Color MyColor = const Color(0xff14395E);
   final GlobalKey<FormState> careerObjectiveFormKey = GlobalKey<FormState>();
 
   final TextEditingController descriptionController = TextEditingController();
@@ -32,7 +32,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               width: _width,
               alignment: const Alignment(0, 0.5),
@@ -101,7 +101,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                             color: Colors.white,
                             margin: const EdgeInsets.all(20),
                             padding: const EdgeInsets.all(20),
-                            height: _height * 0.2,
+                            height: _height * 0.28,
                             width: _width,
                             child: Column(
                               children: [
@@ -115,8 +115,11 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                                     ),
                                   ),
                                 ),
+                              //  SizedBox(height: 20,),
                                 Expanded(
+                                  //flex: 5,
                                   child: TextFormField(
+                                    // maxLines: 10,
                                     validator: (val) {
                                       if (val!.isEmpty) {
                                         return "Enter your Designation First...";

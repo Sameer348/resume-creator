@@ -26,7 +26,7 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
 
   @override
   Widget build(BuildContext context) {
-    Color MyColor = const Color(0xff0475FF);
+    Color MyColor = const Color(0xff14395E);
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -40,7 +40,7 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               width: _width,
               alignment: const Alignment(0, 0.5),
@@ -54,7 +54,7 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
               width: double.infinity,
               color: const Color(0xffEDEDED),
               child: Container(
-                color: Colors.white,
+               // color: Colors.white,
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.all(20),
                 child: SingleChildScrollView(
@@ -65,7 +65,7 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
                       Text(
                         "Enter Your Interest",
                         style: TextStyle(
-                          color: Colors.grey.withOpacity(0.7),
+                          color: Color(0xff14395E).withOpacity(0.7),
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -80,7 +80,7 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
                         height: _height * 0.055,
                         width: _width,
                         child: OutlinedButton(
-                          child: const Icon(Icons.add),
+                          child: const Icon(Icons.add,color: Color(0xff14395E),),
                           onPressed: () {
                             setState(() {
                               allControllers.add(TextEditingController());
@@ -127,14 +127,14 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
             decoration: InputDecoration(
               hintText: "Travelling, Fishing, Painting",
               hintStyle: TextStyle(
-                color: Colors.grey.withOpacity(0.5),
+                color: Color(0xff14395E).withOpacity(0.5),
                 fontWeight: FontWeight.w500,
               ),
             ),
           ),
         ),
         IconButton(
-          icon: const Icon(Icons.delete),
+          icon: const Icon(Icons.delete,color: Color(0xff14395E),),
           onPressed: () {
             setState(() {
               allControllers.removeAt(i);

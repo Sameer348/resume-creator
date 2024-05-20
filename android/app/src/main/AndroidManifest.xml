@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.resume_builder_app">
+    package="com.saimdev.wallpaperapp">
    <application
-        android:label="resume_builder_app"
+        android:label="Resume Creator"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

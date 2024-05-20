@@ -11,11 +11,11 @@ class experience_page extends StatefulWidget {
 }
 
 class _experience_pageState extends State<experience_page> {
-  Color MyColor = const Color(0xff0475FF);
+  Color MyColor = const Color(0xff14395E);
   var MyTextStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
-    color: const Color(0xff0475FF).withOpacity(0.8),
+    color: const Color(0xff14395E).withOpacity(0.8),
   );
 
   final GlobalKey<FormState> experienceFormKey = GlobalKey<FormState>();
@@ -41,7 +41,7 @@ class _experience_pageState extends State<experience_page> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               width: _width,
               alignment: const Alignment(0, 0.5),
@@ -57,9 +57,9 @@ class _experience_pageState extends State<experience_page> {
                 child: Column(
                   children: [
                     Container(
-                      color: Colors.white,
+                 //     color: Colors.white,
                       margin: const EdgeInsets.only(
-                          top: 30, bottom: 20, right: 20, left: 20),
+                          top: 30, bottom: 0, right: 20, left: 20),
                       padding: const EdgeInsets.all(20),
                       child: Form(
                         key: experienceFormKey,
@@ -152,7 +152,7 @@ class _experience_pageState extends State<experience_page> {
                                       const Text(
                                         "Previously Employed",
                                         style: TextStyle(
-                                          color: Colors.blue,
+                                          color: Color(0xff14395E),
                                           fontSize: 12,
                                         ),
                                       )
@@ -174,7 +174,7 @@ class _experience_pageState extends State<experience_page> {
                                       const Text(
                                         "Currently Employed",
                                         style: TextStyle(
-                                          color: Colors.blue,
+                                          color: Color(0xff14395E),
                                           fontSize: 12,
                                         ),
                                       )

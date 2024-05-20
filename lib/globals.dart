@@ -14,8 +14,8 @@ class Global {
   static String? dateOfBirth;
   static String? maritalStatus;
   static bool englishCheckBox = false;
-  static bool hindiCheckBox = false;
-  static bool gujratiCheckBox = false;
+  static bool urduCheckBox = false;
+  static bool turkishCheckBox = false;
   static String? nationality;
 
   static String? course;

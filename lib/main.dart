@@ -47,13 +47,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Color MyColor = const Color(0xff0475FF);
+    Color MyColor = const Color(0xff14395E);
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: MyColor,
-        title: const Text("Resume Builder"),
+        title: const Text("WELLCOME",style: TextStyle(fontSize: 17),),
         centerTitle: true,
         elevation: 0,
       ),
@@ -65,6 +66,7 @@ class _HomePageState extends State<HomePage> {
         child: const Icon(
           Icons.add,
           size: 30,
+
         ),
       ),
       body: Column(
@@ -76,7 +78,7 @@ class _HomePageState extends State<HomePage> {
               alignment: const Alignment(0, 0.5),
               color: MyColor,
               child: const Text(
-                "RESUME",
+                "RESUME BUILDER",
                 style: TextStyle(color: Colors.white, fontSize: 21),
               ),
             ),
@@ -89,11 +91,17 @@ class _HomePageState extends State<HomePage> {
                 Image.asset(
                   height: _height * 0.07,
                   "assets/icons/open-cardboard-box.png",
+                  color: Color(0xff14395E),
                 ),
                 SizedBox(height: _height * 0.03),
                 const Text(
-                  "No Resumes + Create new Resume",
-                  style: TextStyle(fontSize: 21, color: Colors.grey),
+                  "No Resumes",
+                  style: TextStyle(fontSize: 21, color: Color(0xff14395E)),
+                ),
+                SizedBox(height: _height * 0.03),
+                const Text(
+                  " Create new Resume",
+                  style: TextStyle(fontSize: 21, color: Color(0xff14395E)),
                 )
               ],
             ),

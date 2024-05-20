@@ -27,7 +27,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
 
   @override
   Widget build(BuildContext context) {
-    Color MyColor = const Color(0xff0475FF);
+    Color MyColor = const Color(0xff14395E);
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -41,7 +41,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               width: _width,
               alignment: const Alignment(0, 0.5),
@@ -55,7 +55,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
               width: double.infinity,
               color: const Color(0xffEDEDED),
               child: Container(
-                color: Colors.white,
+                //color: Colors.white,
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.all(20),
                 child: SingleChildScrollView(
@@ -66,7 +66,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                       Text(
                         "Enter Your Skills",
                         style: TextStyle(
-                          color: Colors.grey.withOpacity(0.7),
+                          color: Color(0xff14395E),
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -80,15 +80,18 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                       Container(
                         height: _height * 0.055,
                         width: _width,
-                        child: OutlinedButton(
-                          child: const Icon(Icons.add),
-                          onPressed: () {
-                            setState(() {
-                              allControllers.add(TextEditingController());
-                              allTextFildList.add(getTextFild(
-                                  i: allTextFildList.length, row: Row()));
-                            });
-                          },
+                        child: Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                          child: OutlinedButton(
+                            child: const Icon(Icons.add,color: Color(0xff14395E),),
+                            onPressed: () {
+                              setState(() {
+                                allControllers.add(TextEditingController());
+                                allTextFildList.add(getTextFild(
+                                    i: allTextFildList.length, row: Row()));
+                              });
+                            },
+                          ),
                         ),
                       ),
                       SizedBox(height: _height * 0.03),
@@ -126,16 +129,16 @@ class _technical_skills_pageState extends State<technical_skills_page> {
           child: TextField(
             controller: allControllers[i],
             decoration: InputDecoration(
-              hintText: "C Programming, Web Technical",
+              hintText: "C Programming, App Technical",
               hintStyle: TextStyle(
-                color: Colors.grey.withOpacity(0.5),
+                color: Color(0xff14395E).withOpacity(0.5),
                 fontWeight: FontWeight.w500,
               ),
             ),
           ),
         ),
         IconButton(
-          icon: const Icon(Icons.delete),
+          icon: const Icon(Icons.delete,color:Color(0xff14395E) ,),
           onPressed: () {
             setState(() {
               allControllers.removeAt(i);

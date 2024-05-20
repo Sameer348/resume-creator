@@ -11,11 +11,11 @@ class education_page extends StatefulWidget {
 }
 
 class _education_pageState extends State<education_page> {
-  Color MyColor = const Color(0xff0475FF);
+  Color MyColor = const Color(0xff14395E);
   var MyTextStyle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
-    color: const Color(0xff0475FF).withOpacity(0.8),
+    color: const Color(0xff14395E).withOpacity(0.8),
   );
 
   final GlobalKey<FormState> educationFormKey = GlobalKey<FormState>();
@@ -26,7 +26,7 @@ class _education_pageState extends State<education_page> {
   final TextEditingController passYearController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    Color MyColor = const Color(0xff0475FF);
+    Color MyColor = const Color(0xff14395E);
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -40,7 +40,7 @@ class _education_pageState extends State<education_page> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               width: _width,
               alignment: const Alignment(0, 0.5),
@@ -50,7 +50,7 @@ class _education_pageState extends State<education_page> {
           Expanded(
             flex: 18,
             child: Container(
-              color: const Color(0xffEDEDED),
+         //     color: const Color(0xffEDEDED),
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(
@@ -81,7 +81,7 @@ class _education_pageState extends State<education_page> {
                               },
                               controller: courseController,
                               decoration: const InputDecoration(
-                                hintText: "B. Tech Information Technology",
+                                hintText: "Information Technology",
                                 border: OutlineInputBorder(),
                               ),
                             ),
@@ -103,7 +103,7 @@ class _education_pageState extends State<education_page> {
                               },
                               controller: collageController,
                               decoration: const InputDecoration(
-                                hintText: "Bhagavan Mahavir University",
+                                hintText: "University Of Haripur",
                                 border: OutlineInputBorder(),
                               ),
                             ),
@@ -125,7 +125,7 @@ class _education_pageState extends State<education_page> {
                               },
                               controller: marksController,
                               decoration: const InputDecoration(
-                                hintText: "70% (or) 7.0 CGPA",
+                                hintText: "70% (or) 4.0 CGPA",
                                 border: OutlineInputBorder(),
                               ),
                             ),
@@ -147,7 +147,7 @@ class _education_pageState extends State<education_page> {
                               keyboardType: TextInputType.number,
                               controller: passYearController,
                               decoration: const InputDecoration(
-                                hintText: "2019",
+                                hintText: "2024",
                                 border: OutlineInputBorder(),
                               ),
                             ),

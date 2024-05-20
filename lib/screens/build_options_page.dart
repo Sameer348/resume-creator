@@ -81,14 +81,14 @@ class _Build_Options_PageState extends State<Build_Options_Page> {
   ];
   @override
   Widget build(BuildContext context) {
-    Color MyColor = const Color(0xff0475FF);
+    Color MyColor = const Color(0xff14395E);
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         leading: backButton(context),
         backgroundColor: MyColor,
-        title: const Text("Resume Workspace"),
+        title: const Text("Resume Builder"),
         centerTitle: true,
         elevation: 0,
         actions: [
@@ -103,8 +103,8 @@ class _Build_Options_PageState extends State<Build_Options_Page> {
               }
             },
             child: const SizedBox(
-              width: 60,
-              child: Icon(Icons.picture_as_pdf),
+              width: 75,
+              child: Icon(Icons.picture_as_pdf,size: 30,),
             ),
           )
         ],
@@ -139,25 +139,32 @@ class _Build_Options_PageState extends State<Build_Options_Page> {
                           onTap: () {
                             Navigator.of(context).pushNamed(option["routes"]);
                           },
-                          child: Row(
-                            children: [
-                              SizedBox(width: _width * 0.04),
-                              Image.asset(
-                                option["image"],
-                                height: _height * 0.0495,
-                              ),
-                              SizedBox(width: _width * 0.06),
-                              Text(
-                                option["option_name"],
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
+                          child: Card(
+                            elevation:8,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                              children: [
+                                SizedBox(width: _width * 0.04),
+                                Image.asset(
+                                  option["image"],
+                                  height: _height * 0.0495,
+                                  color: Color(0xff14395E),
                                 ),
+                                SizedBox(width: _width * 0.06),
+                                Text(
+                                  option["option_name"],
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Icon(Icons.arrow_forward_ios_sharp,size: 20,),
+                                SizedBox(width: _width * 0.02),
+                              ],
                               ),
-                              const Spacer(),
-                              const Icon(Icons.arrow_forward_ios_sharp),
-                              SizedBox(width: _width * 0.05),
-                            ],
+                            )
                           ),
                         ),
                         const Divider(),

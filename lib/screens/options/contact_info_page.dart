@@ -13,7 +13,7 @@ class contact_info_page extends StatefulWidget {
 }
 
 class _contact_info_pageState extends State<contact_info_page> {
-  Color MyColor = const Color(0xff0475FF);
+  Color MyColor = const Color(0xff14395E);
   int initialIndex = 0;
 
   final ImagePicker _picker = ImagePicker();
@@ -136,22 +136,22 @@ class _contact_info_pageState extends State<contact_info_page> {
                 children: [
                   SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
-                    child: Column(
-                      children: [
-                        Container(
-                          height: _height * 0.48,
-                          margin: const EdgeInsets.all(20),
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
-                          color: Colors.white,
-                          child: SingleChildScrollView(
-                            physics: const BouncingScrollPhysics(),
-                            child: Expanded(
-                              flex: 7,
-                              child: Form(
-                                key: contactFormKey,
-                                child: Column(
-                                  children: [
-                                    Row(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Form(
+                            key: contactFormKey,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration:BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                      color: Colors.white70
+                            ),
+                                    child: Row(
                                       children: [
                                         Expanded(
                                           child: Image.asset(
@@ -183,7 +183,16 @@ class _contact_info_pageState extends State<contact_info_page> {
                                         ),
                                       ],
                                     ),
-                                    Row(
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration:BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: Colors.white70
+                                    ),
+                                    child: Row(
                                       children: [
                                         Expanded(
                                           child: Image.asset(
@@ -208,7 +217,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                               });
                                             },
                                             keyboardType:
-                                                TextInputType.emailAddress,
+                                            TextInputType.emailAddress,
                                             decoration: const InputDecoration(
                                               hintText: "Email",
                                               label: Text("Email"),
@@ -217,7 +226,16 @@ class _contact_info_pageState extends State<contact_info_page> {
                                         ),
                                       ],
                                     ),
-                                    Row(
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration:BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: Colors.white70
+                                    ),
+                                    child: Row(
                                       children: [
                                         Expanded(
                                           child: Image.asset(
@@ -250,7 +268,16 @@ class _contact_info_pageState extends State<contact_info_page> {
                                         ),
                                       ],
                                     ),
-                                    Row(
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration:BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: Colors.white70
+                                    ),
+                                    child: Row(
                                       children: [
                                         Expanded(
                                           child: Image.asset(
@@ -276,7 +303,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                             },
                                             decoration: const InputDecoration(
                                               hintText:
-                                                  "Address (Street, Building No)",
+                                              "Address (Street, Building No)",
                                               label: Text(
                                                   "Address (Street, Building No)"),
                                             ),
@@ -284,7 +311,16 @@ class _contact_info_pageState extends State<contact_info_page> {
                                         ),
                                       ],
                                     ),
-                                    Row(
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration:BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: Colors.white70
+                                    ),
+                                    child: Row(
                                       children: [
                                         Expanded(child: Container()),
                                         SizedBox(width: _width * 0.02),
@@ -305,7 +341,16 @@ class _contact_info_pageState extends State<contact_info_page> {
                                         ),
                                       ],
                                     ),
-                                    Row(
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration:BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: Colors.white70
+                                    ),
+                                    child: Row(
                                       children: [
                                         Expanded(child: Container()),
                                         SizedBox(width: _width * 0.02),
@@ -326,53 +371,56 @@ class _contact_info_pageState extends State<contact_info_page> {
                                         ),
                                       ],
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ),
-                        ),
-                        SizedBox(height: _height * 0.02),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                if (contactFormKey.currentState!.validate()) {
-                                  contactFormKey.currentState!.save();
-                                }
-                              },
-                              style: ElevatedButton.styleFrom(
-                                primary: MyColor,
-                              ),
-                              child: const Text("Save"),
-                            ),
-                            ElevatedButton(
-                                onPressed: () {
-                                  contactFormKey.currentState!.reset();
 
-                                  nameController.clear();
-                                  emailController.clear();
-                                  phoneController.clear();
-                                  address1Controller.clear();
-                                  address2Controller.clear();
-                                  address3Controller.clear();
-                                  setState(() {
-                                    Global.name = null;
-                                    Global.email = null;
-                                    Global.phone = null;
-                                    Global.address1 = null;
-                                    Global.address2 = null;
-                                    Global.address3 = null;
-                                  });
+                          SizedBox(height: _height * 0.02),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              ElevatedButton(
+
+                                onPressed: () {
+                                  if (contactFormKey.currentState!.validate()) {
+                                    contactFormKey.currentState!.save();
+                                  }
                                 },
                                 style: ElevatedButton.styleFrom(
                                   primary: MyColor,
+
                                 ),
-                                child: const Text("Clear")),
-                          ],
-                        ),
-                      ],
+                                child: const Text("Save"),
+                              ),
+                              ElevatedButton(
+                                  onPressed: () {
+                                    contactFormKey.currentState!.reset();
+
+                                    nameController.clear();
+                                    emailController.clear();
+                                    phoneController.clear();
+                                    address1Controller.clear();
+                                    address2Controller.clear();
+                                    address3Controller.clear();
+                                    setState(() {
+                                      Global.name = null;
+                                      Global.email = null;
+                                      Global.phone = null;
+                                      Global.address1 = null;
+                                      Global.address2 = null;
+                                      Global.address3 = null;
+                                    });
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    primary: MyColor,
+                                  ),
+                                  child: const Text("Clear")),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(

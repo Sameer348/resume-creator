@@ -5,6 +5,6 @@ Widget backButton(context) {
     onTap: () {
       Navigator.of(context).pop();
     },
-    child: const Icon(Icons.arrow_back_ios_sharp),
+    child: const Icon(Icons.arrow_back_ios_sharp,size: 25,),
   );
 }
